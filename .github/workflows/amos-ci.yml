@@ -25,7 +25,7 @@ on:
 
 jobs:
   amos-ci:
-    name: Pipeline
+    name: CI
     uses: bentideswell/amos-ci/.github/workflows/amos-ci.yml@main
     permissions:
       contents: write
