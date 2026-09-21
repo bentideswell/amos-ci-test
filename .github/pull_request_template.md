@@ -7,16 +7,6 @@ PR TITLE: Conventional Commits format — <type>: <short description>
 This drives the automatic version bump. Don't skip the prefix.
 -->
 
-## What & why
-
-<!-- One or two sentences: what changed, and why. -->
-
-
-
-Basecamp card: <!-- optional link, if there is one -->
-
----
-
 ## Release Notes
 
 <!--
@@ -38,8 +28,6 @@ they're useful context. Still describe the change itself, not "how", though.
 ### Fixed
 -
 
----
-
 ## Client Impact
 
 <!--
@@ -49,16 +37,17 @@ developer language. No ticket numbers, no repo/branch/table/column/function
 names, no developer names.
 If this has no client-visible effect (refactor, tests, CI, tooling, dependency
 bump, internal-only change), write "Client impact: none".
+
+The "client-facing" label is applied automatically from this line by Amos CI
+on every push — don't add or remove it yourself.
 -->
 
 Client impact:
 
----
 
-### Before merging
+## Before merging
 
 - [ ] PR title follows Conventional Commits
 - [ ] `## Release Notes` filled in (or intentionally omitted for a pure promotion/backport)
 - [ ] `Client impact:` line filled in
-- [ ] `client-facing` label applied, if the Client impact line describes something a client would notice
 - [ ] Instructional comments above deleted
