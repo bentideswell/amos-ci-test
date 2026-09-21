@@ -11,43 +11,29 @@ This drives the automatic version bump. Don't skip the prefix.
 
 <!--
 INTERNAL — read verbatim by the build pipeline for the deployment manager.
-Keep the heading exactly as "## Release Notes"; the pipeline parses it literally.
-Delete whichever subsections don't apply. Delete this whole section only if
-the PR is a pure promotion/backport with nothing new to log — otherwise fill
-it in, even briefly.
-Audience is internal/ops — file, module or component names are fine here if
-they're useful context. Still describe the change itself, not "how", though.
+Keep the heading exactly as "## Release Notes"; it's parsed literally.
+A sentence or two is enough for most PRs — it's fine for this to closely
+echo the title, just written for someone reading a changelog rather than a
+diff. Only break it into ### Added / ### Changed / ### Fixed if this PR
+genuinely spans more than one of them; don't add empty subsections just to
+match a template.
+Delete this whole section only for a pure promotion/backport with nothing
+new to log.
 -->
 
-### Added
--
 
-### Changed
--
-
-### Fixed
--
 
 ## Client Impact
 
 <!--
-CLIENT-FACING — read by the release-notes plugin when drafting a client note.
-One sentence, in words a client's admin/HR/registry staff would use — not
-developer language. No ticket numbers, no repo/branch/table/column/function
-names, no developer names.
-If this has no client-visible effect (refactor, tests, CI, tooling, dependency
-bump, internal-only change), write "Client impact: none".
+CLIENT-FACING — read by the release-notes plugin. One sentence, in words a
+client's admin/HR/registry staff would use, not developer language. Write
+"Client impact: none" if this has no client-visible effect (refactor, tests,
+CI, tooling, dependency bump). It's fine for this to closely echo the
+Release Notes line above — you don't need to force them to differ.
 
-The "client-facing" label is applied automatically from this line by Amos CI
-on every push — don't add or remove it yourself.
+The "client-facing" label is applied automatically from this line — don't
+add or remove it yourself.
 -->
 
 Client impact:
-
-
-## Before merging
-
-- [ ] PR title follows Conventional Commits
-- [ ] `## Release Notes` filled in (or intentionally omitted for a pure promotion/backport)
-- [ ] `Client impact:` line filled in
-- [ ] Instructional comments above deleted
