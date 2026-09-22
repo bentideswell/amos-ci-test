@@ -37,3 +37,12 @@ add or remove it yourself.
 -->
 
 Client impact:
+
+## Before merging
+
+- [ ] PR title follows format: `$type: $message`
+- [ ] `## Release Notes` filled in (or intentionally omitted for a pure promotion/backport)
+- [ ] `Client impact:` line filled in
+- [ ] Instructional comments above deleted
+
+
